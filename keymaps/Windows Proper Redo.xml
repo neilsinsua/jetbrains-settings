@@ -5,10 +5,22 @@
     <keyboard-shortcut first-keystroke="ctrl y" />
   </action>
   <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="alt f12" />
     <keyboard-shortcut first-keystroke="alt 5" />
   </action>
+  <action id="EditorContextInfo" />
   <action id="EditorDeleteLine">
     <keyboard-shortcut first-keystroke="ctrl alt back_space" />
+  </action>
+  <action id="QuickTypeDefinition">
+    <keyboard-shortcut first-keystroke="ctrl alt 2" />
+  </action>
+  <action id="Quokka.RunQuokkaOnFileAutomatically">
+    <keyboard-shortcut first-keystroke="alt q" />
+  </action>
+  <action id="ShowErrorDescription">
+    <keyboard-shortcut first-keystroke="ctrl f1" />
+    <keyboard-shortcut first-keystroke="ctrl alt 1" />
   </action>
   <action id="VimPluginToggle">
     <keyboard-shortcut first-keystroke="shift z" />
