@@ -1,0 +1,59 @@
+<templateSet group="user">
+  <template name="pivotTable" value="$table-&gt;primary(['$MODEL1$','$MODEL2$']);&#10;            $table-&gt;foreignId('$MODEL1$');&#10;            $table-&gt;foreignId('$MODEL2$');&#10;            $table-&gt;timestamps();&#10;&#10;            $table-&gt;foreign('$MODEL1$')&#10;                -&gt;references('id')&#10;                -&gt;on('')&#10;                -&gt;onDelete('cascade');&#10;&#10;            $table-&gt;foreign('$MODEL2$')&#10;                -&gt;references('id')&#10;                -&gt;on('')&#10;                -&gt;onDelete('cascade');" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="MODEL1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MODEL2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bladeSurround" value="@$TAG$() &#10;    $SELECTION$ &#10;@end$TAG$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="forminput" value="&lt;div class=&quot;mb-6&quot;&gt;&#10;&#10;    &lt;label for=&quot;$name$&quot; class=&quot;block mb-2 uppercase font-bold text-xs text-gray-700&quot;&gt;&#10;        $NAME$&#10;    &lt;/label&gt;&#10;&#10;    &lt;input&#10;        type=&quot;text&quot;&#10;        class=&quot;border border-gray-400 p-2 w-full rounded&quot;&#10;        name=&quot;$name$&quot;&#10;        id=&quot;$name$&quot;&#10;        required&#10;    &gt;&#10;&#10;    @error('$name$')&#10;        &lt;p class=&quot;text-red-500 text-xs mt-2&quot;&gt;{{ $message }}&lt;/p&gt;&#10;    @enderror&#10;&lt;/div&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(name)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="formpassword" value="&lt;div class=&quot;mb-6&quot;&gt;&#10;&#10;    &lt;label for=&quot;$password$&quot; class=&quot;block mb-2 uppercase font-bold text-xs text-gray-700&quot;&gt;&#10;        $PASSWORD$&#10;    &lt;/label&gt;&#10;&#10;    &lt;input&#10;        type=&quot;password&quot;&#10;        class=&quot;border border-gray-400 p-2 w-full rounded&quot;&#10;        name=&quot;$password$&quot;&#10;        id=&quot;$password$&quot;&#10;        required&#10;    &gt;&#10;&#10;    @error('$password$')&#10;        &lt;p class=&quot;text-red-500 text-xs mt-2&quot;&gt;{{ $message }}&lt;/p&gt;&#10;    @enderror&#10;&lt;/div&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="PASSWORD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="password" expression="decapitalize(spacesToUnderscores(PASSWORD))" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="formsubmit" value="&lt;div class=&quot;mb-6&quot;&gt;&#10;&#10;    &lt;button type=&quot;submit&quot; class=&quot;bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500&quot;&gt;&#10;        Submit&#10;    &lt;/button&gt;&#10;    &#10;&lt;/div&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="formtextarea" value="&lt;div class=&quot;mb-6&quot;&gt;&#10;&#10;    &lt;label for=&quot;$name$&quot; class=&quot;block mb-2 uppercase font-bold text-xs text-gray-700&quot;&gt;&#10;        $NAME$&#10;    &lt;/label&gt;&#10;    &#10;    &lt;textarea&#10;        name=&quot;$name$&quot;&#10;        id=&quot;$name$&quot;&#10;        class=&quot;border border-gray-400 p-2 w-full rounded&quot;&#10;    &gt;&lt;/textarea&gt;&#10;    &#10;    @error('$name$')&#10;    &lt;p class=&quot;text-red-500 text-xs mt-2&quot;&gt;{{ $message }}&lt;/p&gt;&#10;    @enderror&#10;    &#10;&lt;/div&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(name)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="reactbind" value="this.$name$ = this.$name$.bind(this);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reactprop" value="$name$={this.props.$name$}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="reactclass" value="class $name$ extends React.Component {&#10;    render() {&#10;        return (&#10;            &lt;div&gt;&#10;                $name$&#10;            &lt;/div&gt;&#10;        )&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
